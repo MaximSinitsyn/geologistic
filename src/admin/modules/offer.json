@@ -1,0 +1,40 @@
+{
+    "caption": {
+        "data": "Экспресс доставка"
+    },
+    "criterion": {
+        "data": {
+            "heft": "От 30 кг.",
+            "cost": "От 87 руб."
+        }
+    },
+    "description": {
+        "data": "Авиа доставка грузов Москва-Братск"
+    },
+    "btn": {
+        "data": {
+            "name": "Отправить груз",
+            "link": "#"
+        }
+    },
+    "calc": {
+        "data": {
+            "name": "Рассчитать стоимость",
+            "link": "#"
+        }
+    },
+    "image_plane": {
+        "data": {
+          "base": "./images/",
+          "file": "airplane_offer.png",
+          "alt": "Описание"
+        }
+    },
+    "image_air": {
+        "data": {
+          "base": "./images/",
+          "file": "air.png",
+          "alt": "Описание"
+        }
+    }
+}

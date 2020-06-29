@@ -1,0 +1,46 @@
+{
+  "__root": {
+    "phone": {
+      "data": "8 800 500 93 56"
+    },
+    "feedback": {
+      "data": {
+          "name": "Заказать звонок",
+          "link": "#"
+      }
+    },
+    "favicon": {
+      "data": {
+        "path": "./favicon/",
+        "png": "fav_64.png",
+        "iso": "fav.ico",
+        "ios": ["57", "72", "114", "144", "180"]
+      },
+      "admin": false
+    }
+  },
+  "__modules": {
+    "offer": {
+      "json": "modules/offer.json"
+    },
+    "features": {
+      "json": "modules/features.json"
+    },
+    "decisions": {
+      "json": "modules/decisions.json"
+    },
+    "request": {
+      "json": "modules/request.json"
+    },
+    "application": {
+      "json": "modules/application.json"
+    },
+    "advantage": {
+      "json": "modules/advantage.json"
+    },
+    "footer": {
+      "json": "modules/footer.json"
+    }
+  },
+  "__scripts": []
+}

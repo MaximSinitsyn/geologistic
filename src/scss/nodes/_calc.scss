@@ -1,0 +1,41 @@
+.calc {
+    display: flex;
+
+    &_indent {
+        margin-left: 40px;
+
+        @media (max-width: 1099px) {
+            margin-left: 0;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:hover &__text {
+        border-bottom: 1px dashed $balanced;
+    }
+
+    &__img {
+        max-height: 60px;
+    }
+    
+    &__text-wrapper {
+        padding-left: $offset_s;
+        text-align: left;
+        display: block;
+        max-width: 150px;
+    }
+    
+    &__text {
+        font-size: 24px;
+        line-height: 30px;
+        color: $balanced;
+        font-weight: bold;
+    
+        &_dark {
+            color: $balanced-dark;
+        }
+    }
+}

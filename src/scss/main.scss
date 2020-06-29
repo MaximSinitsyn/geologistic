@@ -1,0 +1,129 @@
+
+
+@import "variables/variables";
+
+// Хелперы
+@import "helpers/mixins/media-query";
+@import "helpers/mixins/image";
+
+// Переменные
+@import "variables/colors";
+@import "variables/font";
+
+// Базовые стили
+@import "base/reset";
+@import "base/base";
+@import "base/grid";
+
+@import "layout/layout";
+
+@import "../../tmp/scss/sprite";
+
+// Ноды
+@import "nodes/btn";
+@import "nodes/calc";
+@import "nodes/text";
+@import "nodes/input";
+@import "nodes/link";
+
+// Компоненты
+@import "components/header";
+@import "components/offer";
+@import "components/features";
+@import "components/decisions";
+@import "components/request";
+@import "components/application";
+@import "components/advantage";
+@import "components/footer";
+@import "components/modal";
+
+// Модули
+@import "modules/rectangle";
+@import "modules/form";
+
+// Утилиты
+@import "utils/animation";
+
+.warn,
+.error {
+    display: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 40px;
+    padding: 10px;
+    background: red;
+    text-align: center;
+
+    p {
+        margin: 0;
+    }
+
+    &_active {
+        display: block;
+    }
+}
+
+.preloader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    &__icon {
+        fill: #28667c;
+        max-width: 40px;
+        height: 40px;
+        animation: rotating 1400ms infinite cubic-bezier(0.6, -0.28, 0.74, 0.05);
+    }
+}
+
+@keyframes rotating {
+    to {
+        transform: rotate(0deg);
+    }
+    from {
+        transform: rotate(-360deg);
+    }
+}
+
+.thanks {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+
+    &__head {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        font-size: 20px;
+        max-width: 400px;
+        text-align: center;
+    }
+}
+
+.calcInfo {
+    &__info {
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 30px;
+        margin-top: 20px;
+        padding: 20px 20px 16px;
+        background: rgba(255, 255, 255, 0.3);
+        border: 3px solid #28667c;
+
+        @media (max-width: 500px) {
+            font-size: 22px;
+        }
+    }
+
+    &__recalc {
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,97 @@
+<div class='decisions'>
+    <div class='decisions__row row'>
+        <div class='col xs-12 xs-center md-6 md-end hg-3 decisions__col animated'
+            data-scrollspy='{
+                "offset": 0, 
+                "class_in": "fadeInLeftBig",
+                "delay_in": "delay_8s"
+            }'>
+            <div class='decisions__title decisions__title_left text text_sm'>
+                {{ __scope.title_left }}
+            </div>
+
+            <div class='decisions__content'>
+                {% for natural in __scope.naturals %}
+                    <div class='decisions__text text text_xs text_slim text_gray'>
+                        {{ natural.text }}
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class='decisions__link-wrapper'>
+               
+                <div class='decisions__link-block'>
+                    <a class='decisions__link link' href='{{ __scope.links_left.calc.link }}'>
+                        {{ __scope.links_left.calc.name }}
+                    </a>
+                </div>   
+
+                <div class='decisions__link-block'>
+                    <button class='decisions__link link'
+                            data-modal='{"name": "modal_form", "id": "modal"}'>
+                        {{ __scope.links_left.form.name }}
+                    </button>
+                </div>  
+
+            </div>
+        </div>
+        <div class='col xs-off hg hg-6 decisions__col animated'
+            data-scrollspy='{
+                "offset": 0, 
+                "class_in": "fadeIn",
+                "delay_in": "delay_6s"
+            }'>
+            {% include "utils/image.twig" with { "__scope": __scope.image, "__class": "decisions__img" } %}
+        </div>
+        <div class='col xs-12 xs-center md-6 md-start hg-3 decisions__col animated'
+            data-scrollspy='{
+                "offset": 0, 
+                "class_in": "fadeInRightBig",
+                "delay_in": "delay_8s"
+            }'>
+            <div class='decisions__title decisions__title_right text text_sm'>
+                {{ __scope.title_right }}
+            </div>
+        
+            <div class='decisions__content'>
+                {% for legal in __scope.legals %}
+                    <div class='decisions__text text text_xs text_slim text_gray'>
+                        {{ legal.text }}
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class='decisions__link-wrapper'>
+                {% for link_right in __scope.links_right %} 
+                    <div class='decisions__link-block'>  
+                        <button class='decisions__link link' data-modal='{"name": "decisions_{{link_right.link}}", "id": "modal"}'>
+                            {{ link_right.name }}
+                        </button>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class='row decisions__row xs-center'>
+        <div class='col xs-12 md-6 hg-4 decisions__col'>
+            <button class='decisions__btn btn btn_big'
+                    data-modal='{"name": "modal_form", "id": "modal"}'>
+                {{ decisions.btn.name }}
+            </button>
+        </div>
+    </div>
+</div>
+
+{% for link_right in __scope.links_right %} 
+    <div id='decisions_{{link_right.link}}' class='modal modalCloseOverlay'>
+        <div class='modal__container'>
+            <img class='modal__close' src='./icon/cancel.svg'>
+            <div class='modal__head text text_md'>
+                {{ link_right.name }}
+            </div>
+            <div class='modal__body text text_slim text_sm'>
+                {{ link_right.modalText | raw}}
+            </div>
+        </div>
+    </div>
+{% endfor %}

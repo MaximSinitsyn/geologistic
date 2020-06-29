@@ -1,0 +1,124 @@
+<div class='row advantage'>
+    <div class='col xs-12 md-6 advantage__col'>
+        <div class='row advantage__row xs-center md-start'>
+            <div class='advantage__title text animated'
+                data-scrollspy='{
+                    "offset": 0, 
+                    "class_in": "fadeIn",
+                    "delay_in": "delay_10s"
+                }'>
+                {{ advantage.title }}
+            </div>
+        </div>
+        <div class='row xs-center md-start advantage__row animated'
+            data-scrollspy='{
+                "offset": 0, 
+                "class_in": "fadeInLeftBig",
+                "delay_in": "delay_10s"
+            }'>
+            <div class='advantage__container xs-12 sm-6 md-12 xs-start'>
+                <div class='advantage__content'>
+                    <img class='advantage__icon' src='{{ advantage.icon_cost.base }}{{ advantage.icon_cost.file }}'>
+                    <div class='advantage__caption text text_xs text_bal-dark'>
+                        {{ advantage.caption_cost }}
+                    </div>
+                </div>
+                {% for cost in __scope.costs %}
+                    <div class='advantage__text'>
+                        {{ cost.text }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class='row xs-center md-start advantage__row animated'
+            data-scrollspy='{
+                "offset": 0, 
+                "class_in": "fadeInLeftBig",
+                "delay_in": "delay_14s"
+            }'>
+            <div class='advantage__container xs-12 sm-6 md-12 xs-start'>
+                <div class='advantage__content'>
+                    <img class='advantage__icon' src='{{ advantage.icon_service.base }}{{ advantage.icon_service.file }}'>
+                    <div class='advantage__caption text text_xs text_bal-dark'>
+                        {{ advantage.caption_service }}
+                    </div>
+                </div>
+                {% for service in __scope.services %}
+                    <div class='advantage__text'>
+                        {{ service.text }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class='row xs-center md-start advantage__row animated'
+            data-scrollspy='{
+                "offset": 0, 
+                "class_in": "fadeInLeftBig",
+                "delay_in": "delay_18s"
+            }'>
+            <div class='advantage__container xs-12 sm-6 md-12 xs-start'>
+                <div class='advantage__content'>
+                    <img class='advantage__icon' src='{{ advantage.icon_trust.base }}{{ advantage.icon_trust.file }}'>
+                    <div class='advantage__caption advantage__caption_quality text text_xs text_bal-dark'>
+                        {{ advantage.caption_trust }}
+                    </div>
+                </div>
+                <div class='advantage__img-block'>
+                    {% for client in __scope.clients %}               
+                        {% include "utils/image.twig" with { "__scope": client.img, "__class": "advantage__image" } %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='col xs-off md md-6 advantage__container-rectangle'>
+        <div class='rectangle-image rectangle-image_offer rectangle-image_banner rectangle-image_banner-big'>
+            <div class='rectangle-image__border rectangle-image__border_overlay rectangle-image__border_top animated'
+                data-scrollspy='{
+                    "offset": 0, 
+                    "class_in": "fadeIn",
+                    "delay_in": "delay_16s"
+                }'>
+            </div>
+            <div class='rectangle-image__border rectangle-image__border_overlay rectangle-image__border_right animated'
+                data-scrollspy='{
+                    "offset": 0, 
+                    "class_in": "fadeIn",
+                    "delay_in": "delay_16s"
+                }'>
+            </div>
+            <div class='rectangle-image__border rectangle-image__border_left animated' 
+                data-scrollspy='{
+                    "offset": 0, 
+                    "class_in": "fadeIn",
+                    "delay_in": "delay_16s"
+                }'>
+            </div>
+            <div class='rectangle-image__border rectangle-image__border_bottom animated'
+                data-scrollspy='{
+                    "offset": 0, 
+                    "class_in": "fadeIn",
+                    "delay_in": "delay_12s"
+                }'>
+            </div>
+            <div class='rectangle-image__picture-wrapper rectangle-image__picture-wrapper_layer-up animated'
+                data-scrollspy='{
+                    "offset": 0, 
+                    "class_in": "fadeInRight",
+                    "delay_in": "delay_8s",
+                    "speed_in": "slow"
+                }'>
+                <img class='rectangle-image__picture rectangle-image__picture_plane keyframes keyframes_wzzz' src='./images/5x@airplane_offer.png'>
+            </div>
+            <div class='rectangle-image__picture-wrapper animated'
+                data-scrollspy='{
+                    "offset": 0, 
+                    "class_in": "fadeInRight",
+                    "delay_in": "delay_3s",
+                    "speed_in": "slow"
+                }'>
+                <img class='rectangle-image__picture rectangle-image__picture_air' src='./images/5x@air.png'>
+            </div>    
+        </div>
+    </div>
+</div>

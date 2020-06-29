@@ -1,0 +1,53 @@
+<div class='row application'>
+    <div class='row application__row'>
+        <div class='col xs-12 xs-center application__col'>
+            <div class='application__container'>
+                <div class='application__title animated'
+                    data-scrollspy='{
+                        "offset": 0, 
+                        "class_in": "fadeInUp",
+                        "delay_in": "delay_12s"
+                    }'>
+                    {{ application.title | raw }}
+                </div>
+                <div class='row application__steps animated'
+                    data-scrollspy='{
+                        "offset": 0, 
+                        "class_in": "fadeInDown",
+                        "delay_in": "delay_14s"
+                    }'>
+                    {% for step in __scope.steps %}
+                        <div class='application__step col xs-12 lg-3 xs-center'>
+                            <img class='application__icon' src='{{ step.icon.base }}{{ step.icon.file }}'>
+                            <div class='application__text text text_xs'>
+                                {{ step.text | raw }}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='row application__row'>
+        <div class='col xs-12 xs-center application__col animated'
+            data-scrollspy='{
+                "offset": 0, 
+                "class_in": "fadeIn",
+                "delay_in": "delay_16s"
+            }'>
+            <div class='application__content'>
+                <div class='application__caption text text_white text_sm'>
+                    {{ application.caption }}
+                </div>
+                <div class='application__form'>
+                    {%  include 'modules/form.twig' with {'__variable': 'white'}  %}
+                </div>
+
+                <button class='application__btn btn btn_blc'>
+                    {{ __scope.btn.name }}
+                </button>
+            </div>
+            {% include "utils/image.twig" with { "__scope": application.img, "__class": "application__img" } %}
+        </div>
+    </div>
+</div>

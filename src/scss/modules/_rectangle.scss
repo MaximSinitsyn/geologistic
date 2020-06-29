@@ -1,0 +1,147 @@
+.rectangle-image {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_banner-big {
+        max-width: 460px;
+        max-height: 460px;
+        min-height: 460px;
+        top: 42px;
+    }
+
+    &_offer {
+        position: absolute;
+        right: 20px;
+
+        @media (max-width: 960px) {
+            right: inherit;
+            top: 170px;
+        }
+
+        @media (max-width: 720px) {
+            max-width: 400px;
+            max-height: 400px;
+            min-height: 400px;
+        }
+
+        @media (max-width: 620px) {
+            max-width: 350px;
+            max-height: 350px;
+            min-height: 350px;
+        }
+
+        @media (max-width: 520px) {
+            max-width: 300px;
+            max-height: 300px;
+            min-height: 300px;
+        }
+
+        @media (max-width: 420px) {
+            max-width: 250px;
+            max-height: 250px;
+            min-height: 250px;
+        }
+
+        @media (max-width: 320px) {
+            top: 120px;
+        }
+    }
+
+    &_banner {
+        @media (min-width: 320px) {
+            top: 0;
+            position: relative;
+        }
+    }
+
+    &__border {
+        position: absolute;
+        background: $positive;
+        z-index: 1;
+
+        &_top {
+            top: 0;
+        }
+
+        &_right {
+            right: 0;
+        }
+
+        &_left {
+            left: 0;
+        }
+
+        &_bottom {
+            bottom: 0;
+        }
+
+        &_top,
+        &_bottom {
+            height: $offset_s;
+            width: 100%;
+
+            @media (max-width: 420px) {
+                height: 14px;
+            }
+        }
+
+        &_right,
+        &_left {
+            height: 100%;
+            width: $offset_s;
+
+            @media (max-width: 420px) {
+                width: 14px;
+            }
+        }
+
+        &_overlay {
+            z-index: 2;
+        }
+
+        &_small-h {
+            height: 10px;
+        }
+
+        &_small-w {
+            width: 10px;
+        }
+
+        &_light {
+            background: $white;
+        }
+    }
+
+    &__picture-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        top: 0;
+       
+        &_layer-up {
+            z-index: 1;
+        }
+    }
+
+    &__picture {
+        position: absolute;
+        z-index: 1;
+
+        &_plane {
+            width: 140%;
+            right: -30%;
+        }
+
+        &_air {
+            width: 230%;
+            right: -170px;
+            z-index: 0;
+        }
+    }
+}

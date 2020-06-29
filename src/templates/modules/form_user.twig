@@ -1,0 +1,33 @@
+{#
+
+Использование формы с синим текстом
+{%  include 'modules/form.twig' %}
+
+Использование формы с белым текстом
+{%  include 'modules/form.twig' with {'__variable': 'white'}  %}
+
+#}
+
+{% if  __variable == undefined %}
+    <form action="" class="form">
+        <div class='form__title text_bal-dark'>
+            Имя
+        </div>
+            <div class="form__row">
+                <input class="form__input input" type="text" name="client_name" placeholder="Иван">
+            </div>
+        <div class='form__title text_bal-dark'>
+            Телефон
+        </div>
+        <div class="form__row text_bal-dark">
+            <input class="form__input input" type="text" name="client_phone" placeholder="+7 (916) 111-11-11">
+        </div>
+        <div class='form__title text_bal-dark'>
+            Почта
+        </div>
+        <div class="form__row">
+            <input class="form__input input" type="text" name="client_mail" placeholder="ivan@yandex.ru">
+        </div>
+    </form>
+{% endif %}
+

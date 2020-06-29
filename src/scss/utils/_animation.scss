@@ -1,0 +1,108 @@
+
+.animated {
+    opacity: 0;
+}
+
+.delay {
+    &_1s {
+        animation-delay: .1s;
+    }
+
+    &_2s {
+        animation-delay: .2s;
+    }
+
+    &_3s {
+        animation-delay: .3s;
+    }
+
+    &_4s {
+        animation-delay: .4s;
+    }
+
+    &_5s {
+        animation-delay: .5s;
+    }
+
+    &_6s {
+        animation-delay: .6s;
+    }
+
+    &_7s {
+        animation-delay: .7s;
+    }
+
+    &_8s {
+        animation-delay: .8s;
+    }
+
+    &_9s {
+        animation-delay: .9s;
+    }
+
+    &_10s {
+        animation-delay: .9s;
+    }
+
+    &_11s {
+        animation-delay: 1.1s;
+    }
+
+    &_12s {
+        animation-delay: 1.2s;
+    }
+
+    &_13s {
+        animation-delay: 1.3s;
+    }
+
+    &_14s {
+        animation-delay: 1.4s;
+    }
+
+    &_15s {
+        animation-delay: 1.5s;
+    }
+
+    &_16s {
+        animation-delay: 1.6s;
+    }
+
+    &_17s {
+        animation-delay: 1.7s;
+    }
+
+    &_18s {
+        animation-delay: 1.8s;
+    }
+
+    &_19s {
+        animation-delay: 1.9s;
+    }
+
+    &_20s {
+        animation-delay: 2s;
+    }
+
+    &_22s {
+        animation-delay: 2.2s;
+    }
+}
+
+.keyframes {
+    &_wzzz {
+        animation: wzzz 2s infinite ease-in-out;
+    }
+}
+
+@keyframes wzzz {
+    0% {
+        transform: translateY(-1%);
+    }
+    50% {
+        transform: translateY(1%);
+    }
+    100% {
+        transform: translateY(-1%);
+    }
+}

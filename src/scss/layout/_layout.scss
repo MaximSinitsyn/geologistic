@@ -1,0 +1,27 @@
+html {
+    height: 100%;
+}
+
+.body {
+    height: 100%;
+
+    &__container {
+        position:relative;
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 100%;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    &_noTouch &__container {
+        -webkit-overflow-scrolling: auto;
+    }
+}
+
+.row + .row {
+    min-width: unset;
+}
+
+.header_scroll .row {
+    min-width: auto;
+}

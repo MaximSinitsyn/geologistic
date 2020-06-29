@@ -1,0 +1,59 @@
+{
+    "title": {
+        "data": "<span class='text'>Отправить груз за</span><span class='text text_pos-dark'>3 простых шага</span>"
+    },
+    "steps": [
+        {
+            "icon": {
+                "data": {
+                    "base": "./icon/",
+                    "file": "mail.svg",
+                    "alt": "Описание"
+                }
+            },
+            "text": {
+                "data": "<span>Оставьте</span><span>заявку</span>"
+            }
+        },
+        {
+            "icon": {
+                "data": {
+                    "base": "./icon/",
+                    "file": "operator.svg",
+                    "alt": "Описание"
+                }
+            },
+            "text": {
+                "data": "<span>Согласуйте</span><span>Условия</span>"
+            }
+        },
+        {
+            "icon": {
+                "data": {
+                    "base": "./icon/",
+                    "file": "box.svg",
+                    "alt": "Описание"
+                }
+            },
+            "text": {
+                "data": "<span>Дождитесь</span><span>доставки</span>"
+            }
+        }
+    ],
+    "caption": {
+        "data": "Рассчитать стоимость"
+    },
+    "btn": {
+        "data": {
+            "name": "Рассчитать стоимость",
+            "link": "#"
+        }
+    },
+    "img": {
+        "data": {
+            "base": "./images/",
+            "file": "open_box.png",
+            "alt": "Описание"
+        }
+    }
+}

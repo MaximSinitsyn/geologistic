@@ -1,0 +1,105 @@
+{
+    "title": {
+        "data": "Ключевые преимущества"
+    },
+    "icon_cost": {
+        "data": {
+            "base": "./icon/",
+            "file": "purse.svg",
+            "alt": "Кошелек"
+        }
+    },
+    "caption_cost": {
+        "data": "Оптимальная стоимость"
+    },
+    "costs": [
+        {
+            "text": {
+                "data": "- Мы не посредники, мы агенты авиакомпаний"
+            }
+        },
+        {
+            "text": {
+                "data": "- Собственный терминал и автотранспорт"
+            }
+        },
+        {
+            "text": {
+                "data": "- Высокоточный измирительный комплекс"
+            }
+        }
+    ],
+    "icon_service": {
+        "data": {
+            "base": "./icon/",
+            "file": "operator-positive.svg",
+            "alt": "Оператор"
+        }
+    },
+    "caption_service": {
+        "data": "Клиентский сервис"
+    },
+    "services": [
+        {
+            "text": {
+                "data": "- API интеграция"
+            }
+        },
+        {
+            "text": {
+                "data": "- Персональный менеджер"
+            }
+        },
+        {
+            "text": {
+                "data": "- SMS и e-mail оповещения"
+            }
+        }
+    ],
+    "icon_trust": {
+        "data": {
+            "base": "./icon/",
+            "file": "quality.svg",
+            "alt": "Качество"
+        }
+    },
+    "caption_trust": {
+        "data": "Нам доверяют компании федерального и мирового уровня"
+    },
+    "clients": [
+        {
+            "img": {
+                "data": {
+                    "base": "./images/",
+                    "file": "ozon.png",
+                    "alt": "Описание"
+                }
+            }
+        },
+        {
+            "img": {
+                "data": {
+                    "base": "./images/",
+                    "file": "iledebeaute.png",
+                    "alt": "Описание"
+                }
+            }
+        },
+        {
+            "img": {
+                "data": {
+                    "base": "./images/",
+                    "file": "ups.png",
+                    "alt": "Описание"
+                }
+            }
+        }
+    ],
+    "image_plane": {
+        "data": {
+          "base": "./images/",
+          "file": "airplane_offer.png",
+          "alt": "Описание"
+        }
+    }
+}

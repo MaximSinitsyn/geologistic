@@ -1,0 +1,65 @@
+<div class='footer'>
+    <div class='row footer__row'>
+        <div class='col xs-12 xs-center lg-8 lg-start footer__col animated'
+            data-scrollspy='{
+                "offset": 0, 
+                "class_in": "fadeInLeftBig",
+                "delay_in": "delay_4s"
+            }'>
+            <div class='footer__left xs-center lg-start'>
+                <div class='footer__logo'>
+                    <a class='footer__logo-link' href='#'>
+                        <img class='footer__img' src='../icon/Logo_colored.svg'>
+                    </a>
+                </div>
+                <div class='footer__content xs-center lg-start'>
+                    {% for info in __scope.infos %}
+                        <span class='footer__text'>
+                            {{ info.text | raw }}
+                        </span>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class='col xs-12 xs-center lg-4 lg-end footer__col'>
+            <div class='footer__right'>
+                <div class='footer__communication'>
+                    <a class='footer__phone text text_bal-dark text_lg animated' 
+                        href='tel:{{ __root.phone }}'
+                        data-scrollspy='{
+                            "offset": 0, 
+                            "class_in": "fadeInRightBig",
+                            "delay_in": "delay_4s"
+                        }'>
+                        {{ __root.phone }}
+                    </a>
+                    <button class='footer__feedback text text_white animated' 
+                            data-modal='{"name": "modal_form", "id": "modal"}'
+                            data-scrollspy='{
+                                "offset": 0, 
+                                "class_in": "fadeInRightBig",
+                                "delay_in": "delay_8s"
+                            }'>
+                        {{ __root.feedback.name }}
+                    </button>
+                </div>
+                <div class='footer__kvott animated'
+                    data-scrollspy='{
+                        "offset": 0, 
+                        "class_in": "fadeIn",
+                        "delay_in": "delay_12s"
+                    }'>
+                    <a class='footer__kvott-link' href='#'>
+                        <span class='footer__kvott-text'>
+                            Сайт сделан с
+                        </span>
+                        <img class='footer__kvott-icon' src='../icon/heart.svg'>
+                        <span class='footer__kvott-text'>
+                            студией квотт.
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

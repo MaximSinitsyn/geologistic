@@ -1,0 +1,147 @@
+<div class='row offer'>
+    <div class='offer__content col xs-12 xs-center lg-7 lg-start'>
+        <div class='offer__row-caption'>
+            <div class='offer__caption text animated' 
+                data-scrollspy='{
+                    "offset": 0, 
+                    "class_in": "fadeInLeft"
+                }'>
+                {{ offer.caption }}
+            </div>
+        </div>
+        <div class='offer__row-criterion'>
+            <div class='offer__criterion xs-center lg-start'>
+                <div class='offer__heft text text_pos-dark text_lg animated'
+                    data-scrollspy='{
+                        "offset": 0, 
+                        "visible": "full",
+                        "class_in": "fadeInLeft",
+                        "delay_in": "delay_5s"
+                    }'>
+                    {{ offer.criterion.heft }}
+                </div>
+                <div class='offer__cost text text_pos-dark text_lg animated'
+                    data-scrollspy='{
+                        "offset": 0, 
+                        "visible": "full",
+                        "class_in": "fadeInLeft",
+                        "delay_in": "delay_3s"
+                    }'>
+                    {{ offer.criterion.cost }}
+                </div>
+            </div>
+        </div>
+        <div class='offer__row-description xs xs-center lg-start'>
+            <div class='offer__description text text_slim text_gray text_lg animated'
+                data-scrollspy='{
+                    "offset": 0, 
+                    "visible": "full",
+                    "class_in": "fadeInLeft",
+                    "delay_in": "delay_8s"
+                }'>
+                {{ offer.description }}
+            </div>
+        </div>
+        <div class='offer__row-keys'>
+            <div class='row offer__keys'>
+                <div class='offer__btn col xs-12 lg-6 xs-center lg-start'>
+                    <button class='btn btn_big offer__btn-inner animated'
+                            data-modal='{"name": "modal_form", "id": "modal"}'
+                            data-scrollspy='{
+                                "offset": 0, 
+                                "visible": "full",
+                                "class_in": "fadeInUp",
+                                "delay_in": "delay_10s"
+                            }'>
+                        {{ offer.btn.name }}
+                    </button>
+                </div>
+                <div class='col xs-12 lg-6 xs-center lg-start offer__calc animated'
+                    data-scrollspy='{
+                        "offset": 0, 
+                        "visible": "full",
+                        "class_in": "fadeInUp",
+                        "delay_in": "delay_12s"
+                    }'>
+                    <a class='calc' href='#request'>
+                        <img class='calc__img' src='../icon/calculator.svg'>
+                        <span class='calc__text-wrapper'>
+                            <span class='calc__text'>
+                                {{ offer.calc.name }}
+                            </span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class='offer__row-arrow'>
+            <div class='offer__arrow'>
+                <button class='offer__arrow-btn animated'
+                        data-scrollspy='{
+                            "offset": 0,
+                            "visible": "full", 
+                            "class_in": "fadeInUp",
+                            "delay_in": "delay_16s"
+                        }'>
+                    <img class='offer__arrow-img' src='../icon/arrow.svg'>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class='col xs-12 lg-5 xs-center'>
+        <div class='rectangle-image rectangle-image_offer rectangle-image_banner-big'>
+            <div class='rectangle-image__border rectangle-image__border_overlay rectangle-image__border_top animated'
+                data-scrollspy='{
+                    "offset": 0, 
+                    "visible": "full",
+                    "class_in": "fadeIn",
+                    "delay_in": "delay_16s"
+                }'>
+            </div>
+            <div class='rectangle-image__border rectangle-image__border_overlay rectangle-image__border_right animated'
+                data-scrollspy='{
+                    "offset": 0, 
+                    "visible": "full",
+                    "class_in": "fadeIn",
+                    "delay_in": "delay_16s"
+                }'>
+            </div>
+            <div class='rectangle-image__border rectangle-image__border_left animated'
+                data-scrollspy='{
+                    "offset": 0, 
+                    "visible": "full",
+                    "class_in": "fadeIn",
+                    "delay_in": "delay_16s"
+                }'>
+            </div>
+            <div class='rectangle-image__border rectangle-image__border_bottom animated'
+                data-scrollspy='{
+                    "offset": 0, 
+                    "visible": "full",
+                    "class_in": "fadeIn",
+                    "delay_in": "delay_16s"
+                }'>
+            </div>
+            <div class='rectangle-image__picture-wrapper rectangle-image__picture-wrapper_layer-up animated'
+                data-scrollspy='{
+                    "offset": 0, 
+                    "visible": "full",
+                    "class_in": "fadeInRight",
+                    "delay_in": "delay_8s",
+                    "speed_in": "slow"
+                }'>
+                <img class='rectangle-image__picture rectangle-image__picture_plane keyframes keyframes_wzzz' src='./images/5x@airplane_offer.png'>
+            </div>
+            <div class='rectangle-image__picture-wrapper animated'
+                data-scrollspy='{
+                    "offset": 0, 
+                    "visible": "full",
+                    "class_in": "fadeInRight",
+                    "delay_in": "delay_3s",
+                    "speed_in": "slow"
+                }'>
+                {% include "utils/image.twig" with { "__scope": offer.image_air, "__class": "rectangle-image__picture rectangle-image__picture_air" } %}
+            </div>
+        </div>
+    </div>
+</div>

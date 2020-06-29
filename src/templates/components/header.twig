@@ -1,0 +1,30 @@
+<div class='row header'>
+    <div class='col xs-12 sm-5 xs-center sm-start header__left'>
+        <div class='header__logo animated'
+             data-scrollspy='{
+                 "offset": 0, 
+                 "class_in": "fadeIn",
+                 "delay_in": "delay_20s"
+             }'>
+            <a class='header__logo-link' href='#'>
+                <img class='header__img' src='../icon/logo.svg'>
+            </a>
+        </div>
+    </div>
+    <div class='col xs-12 sm-7 xs-center sm-end header__right'>
+        <div class='header__communication animated'
+            data-scrollspy='{
+                "offset": 0, 
+                "class_in": "fadeIn",
+                "delay_in": "delay_20s"
+            }'>
+            <a class='header__phone text text_sm' href='tel:{{ __root.phone }}'>
+                {{ __root.phone }}
+            </a>
+            <button class='header__feedback text text_xs'
+                    data-modal='{"name": "modal_form", "id": "modal"}'>
+                {{ __root.feedback.name }}
+            </button>
+        </div>
+    </div>
+</div>

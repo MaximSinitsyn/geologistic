@@ -1,0 +1,50 @@
+.advantage {
+    position: relative;
+    flex-wrap: nowrap;
+    margin-top: 140px;
+
+    &__col {
+        flex-direction: column;
+        z-index: 2;
+    }
+
+    // &__row {}
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__container {
+        margin-bottom: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+    }
+
+    // &__icon {}
+
+    &__caption {
+        margin-left: 15px;
+
+        &_quality {
+            margin-left: 21px;
+        }
+    }
+
+    &__text {
+        margin-left: 46px;
+    }
+
+    &__img-block {
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+    
+    // &__image {}
+
+    // &__container-rectangle {}
+}

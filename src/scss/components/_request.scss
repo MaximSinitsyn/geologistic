@@ -1,0 +1,117 @@
+.request {
+    display: flex;
+    margin-top: 100px;
+
+    @media (max-width: 960px) {
+        margin-top: 20px;
+    }
+
+    @media (max-width: 420px) {
+        margin-top: 60px;
+    }
+
+    &__col {
+        position: relative;
+
+        &_right {
+            z-index: 2;
+        }
+    }
+
+    &__content {
+        display: flex;
+
+        @media (max-width: 420px) {
+            max-width: 100%;
+        }
+    }
+
+    &__contanInner {
+        z-index: 2;
+    }
+
+    &__wrapper {
+        position: relative;
+        z-index: 2;
+        border: 15px solid #fff;
+        padding: 50px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+
+        @media (max-width: 420px) {
+            max-width: 100%;
+            padding: 30px;
+        }
+    }
+
+    &__title {
+        border-bottom: 1px dashed $balanced-dark;
+        padding: 0 20px 30px;
+        margin-bottom: 10px;
+    }
+
+    // &__form {}
+
+    &__btn {
+        max-width: 300px;
+        margin-top: 40px;
+        padding: 20px;
+    }
+
+    &__img {
+        width: 185%;
+        height: 160%;
+        top: -170px;
+        right: -200px;
+
+        @media (max-width: 960px) {
+            width: 130%;
+            top: -100px;
+            right: -80px;
+        }
+
+        @media (max-width: 768px) {
+            width: 200%;
+            height: 150%;
+            right: -200px;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media (max-width: 960px) {
+            margin-top: 60px;
+            max-width: 60%;
+        }
+    }
+
+    // &__city {}
+    // &__number {}
+
+    &__text {
+        font-size: 24px;
+        line-height: 30px;
+        color: $gray;
+        padding: 10px 0 40px;
+    }
+
+    &__consultation {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__caption {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: bold;
+    }
+
+    &__link-wrapper {
+        margin-top: 10px;
+    }
+}

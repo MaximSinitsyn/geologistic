@@ -1,0 +1,10 @@
+.link {
+    font-size: 20px;
+    line-height: 20px;
+    color: $balanced-dark;
+    border-bottom: 1px dashed $balanced-dark;
+
+    &:hover {
+        border-bottom: 1px solid $balanced-dark;
+    }
+}

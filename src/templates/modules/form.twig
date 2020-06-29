@@ -1,0 +1,55 @@
+{#
+
+Использование формы с синим текстом
+{%  include 'modules/form.twig' %}
+
+Использование формы с белым текстом
+{%  include 'modules/form.twig' with {'__variable': 'white'}  %}
+
+#}
+
+{% if  __variable == undefined %}
+    <form action="" class="form">
+        <div class='form__title text_bal-dark'>
+            Город отправки
+        </div>
+            <div class="form__row">
+                <input class="form__input input" type="text" name="point" placeholder="Москва">
+            </div>
+        <div class='form__title text_bal-dark'>
+            Город доставки
+        </div>
+        <div class="form__row text_bal-dark">
+            <input class="form__input input" type="text" name="final" placeholder="Братск">
+        </div>
+        <div class='form__title text_bal-dark'>
+            Вес груза
+        </div>
+        <div class="form__row">
+            <input class="form__input input" type="text" name="weight" placeholder="40кг">
+        </div>
+    </form>
+{% endif %}
+
+{% if  __variable == 'white' %}
+    <form action="" class="form">
+        <div class='form__title form__title_small text_white'>
+            Город отправки
+        </div>
+            <div class="form__row">
+                <input class="form__input input input_small" type="text" name="point" placeholder="Москва">
+            </div>
+        <div class='form__title form__title_small text_white'>
+            Город доставки
+        </div>
+        <div class="form__row text_bal-dark">
+            <input class="form__input input input_small" type="text" name="final" placeholder="Братск">
+        </div>
+        <div class='form__title form__title_small text_white'>
+            Вес груза
+        </div>
+        <div class="form__row">
+            <input class="form__input input input_small" type="text" name="weight" placeholder="40кг">
+        </div>
+    </form>
+{% endif %}

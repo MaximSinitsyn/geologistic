@@ -1,0 +1,38 @@
+.header {
+    // &__left {}
+    // &__logo {}
+    // &__logo-link {}
+    
+    &__img {
+        @media (max-width: 768px) {
+            max-width: 180px;
+        }
+    }
+
+    &__right {
+        z-index: 1;
+    }
+
+    &__communication {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+
+        @media (max-width: 420px) {
+            align-items: center;
+        }
+    }
+
+    &__phone {
+        color: $positive-dark;
+        letter-spacing: 1px;
+    }
+
+    &__feedback {
+        color: $balanced;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+}

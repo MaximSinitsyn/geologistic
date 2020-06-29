@@ -1,0 +1,117 @@
+<div class='row feature'>
+    <div class='feature__left col xs-12 lg-6'>
+        <div class='feature__row row xs-center'>
+            <div class='col xs-12 md-8 lg-12 feature__title-wrapper animated'
+                data-scrollspy='{
+                    "offset": 0, 
+                    "class_in": "fadeInDown",
+                    "delay_in": "delay_2s"
+                }'>
+                <div class='feature__title text text_xlg'>
+                    {{ __scope.title | raw }}
+                </div>
+            </div>
+        </div>
+        <div class='feature__row row xs-center lg-start'>
+            <div class='col xs-12 md-8 lg-12 hg-9 hg-l-2 xs-start feature__container-wrapper'>
+                <div class='feature__continer'>
+                    {% for approval in __scope.approvals %}
+                        <div class='feature__content animated'
+                            data-scrollspy='{
+                                "offset": 0, 
+                                "class_in": "fadeInLeft",
+                                "delay_in": "delay_{{approval.number}}s"
+                            }'>
+                            <div class='feature__number'>
+                                {{ approval.number }}
+                            </div>
+                            <div class='feature__text'>
+                                {{ approval.text | raw }}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='feature__right col xs-12 lg-6'>
+        <div class='feature__row row xs-center hg-start'>
+            <div class='col xs-12 md-8 lg-9 hg-l-1 xs-center hg-start feature__caption-wrapper animated'
+                data-scrollspy='{
+                    "offset": 0, 
+                    "class_in": "fadeInDown",
+                    "delay_in": "delay_2s"
+                }'>
+                <div class='feature__caption text text_sm'>
+                    {{ __scope.caption }}
+                </div>
+            </div>
+        </div>
+        <div class="feature__row row xs-center hg-start">
+            <div class="col xs-12 sm-10 md-8 lg-8 hg-l-1 xs-start lg-start feature__container-wrapper">
+                <div class='feature__continer'>
+                    {% for type in __scope.types %}
+                        <div class='feature__content animated'
+                            data-scrollspy='{
+                                "offset":0, 
+                                "class_in": "fadeInRightBig",
+                                "delay_in": "delay_{{loop.index * 4}}s"
+                            }'>
+                            <img class='feature__img' src='{{ type.img.base }}{{ type.img.file }}'>
+                            <div class='feature__text'>
+                                {{ type.view }}
+                                <button class='feature__sign-btn' data-modal='{"name": "feature_{{loop.index}}", "id": "modal"}'>
+                                    <img class='feature__sign' src='{{ type.sign.base }}{{ type.sign.file }}'>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id='feature_{{loop.index}}' class='modal modalCloseOverlay'>
+                            <div class='modal__container'>
+                                <img class='modal__close' src='./icon/cancel.svg'>
+                                <div class='modal__head text text_md'>
+                                    {{ type.view }}
+                                </div>
+                                <div class='modal__body text text_slim text_justify text_sm'>
+                                    {{ type.text | raw }}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class='feature__row row'>
+            <div class='col xs-12 feature__keys-wrapper'>
+                <div class='feature__keys row'>
+                    <div class='feature__keys-inner col xs-12 xs-center hg-6 animated'
+                        data-scrollspy='{
+                            "offset": 0, 
+                            "class_in": "fadeIn",
+                            "delay_in": "delay_20s"
+                        }'>
+                        <button class='feature__btn btn'
+                                data-modal='{"name": "modal_form", "id": "modal"}'>
+                            {{ features.btn.name }}
+                        </button>
+                    </div>
+                    <div class='feature__calc col xs-off hg hg-6 animated'
+                        data-scrollspy='{
+                            "offset": 0, 
+                            "class_in": "fadeIn",
+                            "delay_in": "delay_22s"
+                        }'>
+                        <a class='calc calc_indent' href='#request'>
+                            <img class='calc__img' src='../icon/calculator_dark.svg'>
+                            <span class='calc__text-wrapper'>
+                                <span class='calc__text calc__text_dark'>
+                                    {{ features.calc.name }}
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
